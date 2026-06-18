@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="StreamPlay - Página de pagamento via PIX">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIX - StreamPlay</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <h1 class="logo"><a href="index.html">StreamPlay</a></h1>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="planos.html">Planos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="qrcode-conteudo">
+        <section class="qrcode-card">
+            <img src="img/pix_qrcode_novo.png" alt="QR Code PIX StreamPlay">
+            <div class="qrcode-info">
+                <h2 id="qrcodeTitulo">PIX - StreamPlay</h2>
+                <p id="qrcodeTexto">Use o QR code ao lado para pagar seu plano via PIX.</p>
+                <div class="qrcode-chave">Chave PIX: 086.259.319-01</div>
+                <a class="qrcode-voltar" href="planos.html">Voltar para os planos</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const plano = params.get('plano') || 'seu plano';
+        document.getElementById('qrcodeTitulo').textContent = `PIX - ${plano}`;
+        document.getElementById('qrcodeTexto').textContent = `Escaneie o QR code para pagar o plano ${plano} via PIX.`;
+    </script>
+</body>
+
+</html>

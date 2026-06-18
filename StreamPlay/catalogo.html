@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="StreamPlay - Plataforma de streaming de filmes e séries">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - StreamPlay</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <h1 class="logo"><a href="index.html">StreamPlay</a></h1>
+
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="planos.html">Planos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="catalogo" class="catalogo">
+            <h2>Catálogo</h2>
+
+            <input type="text" id="campoBusca" placeholder="Buscar filme ou série..."
+                aria-label="Buscar filme ou série">
+
+            <div class="filtros">
+                <button class="filtro ativo" data-categoria="todos">Todos</button>
+                <button class="filtro" data-categoria="acao">Ação</button>
+                <button class="filtro" data-categoria="comedia">Comédia</button>
+                <button class="filtro" data-categoria="drama">Drama</button>
+                <button class="filtro" data-categoria="serie">Séries</button>
+            </div>
+
+            <div class="grid-filmes">
+                <article class="card-filme" data-categoria="acao"
+                    data-titulo="Star Wars Episódio VII O Despertar da Força">
+                    <img src="img/filme1.jpg" alt="Capa do filme Star Wars Episódio VII O Despertar da Força">
+
+                    <h3>Star Wars: Episódio VII – O Despertar da Força</h3>
+
+                    <p>Ação</p>
+
+                    <button class="btn-detalhes">Ver detalhes</button>
+                    <button class="btn-favorito">Favoritar</button>
+                </article>
+
+                <article class="card-filme" data-categoria="acao" data-titulo="Jurassic Park">
+                    <img src="img/filme2.jpg" alt="Capa do filme Jurassic Park">
+
+                    <h3>Jurassic Park</h3>
+
+                    <p>Aventura</p>
+
+                    <button class="btn-detalhes">Ver detalhes</button>
+                    <button class="btn-favorito">Favoritar</button>
+                </article>
+
+                <article class="card-filme" data-categoria="comedia" data-titulo="Guardiões da Galáxia Vol 2">
+                    <img src="img/filme3.jpg" alt="Capa do filme Guardiões da Galáxia Vol 2">
+
+                    <h3>Guardiões da Galáxia Vol. 2</h3>
+
+                    <p>Comédia</p>
+
+                    <button class="btn-detalhes">Ver detalhes</button>
+                    <button class="btn-favorito">Favoritar</button>
+                </article>
+
+                <article class="card-filme" data-categoria="drama" data-titulo="Avatar O Caminho da Água">
+                    <img src="img/filme4.jpg" alt="Capa do filme Avatar O Caminho da Água">
+
+                    <h3>Avatar: O Caminho da Água</h3>
+
+                    <p>Drama</p>
+
+                    <button class="btn-detalhes">Ver detalhes</button>
+                    <button class="btn-favorito">Favoritar</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 StreamPlay. Todos os direitos reservados.</p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-conteudo">
+            <button id="fecharModal" class="fechar">&times;</button>
+            <h2 id="modalTitulo"></h2>
+            <p id="modalTexto"></p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

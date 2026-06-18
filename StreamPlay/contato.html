@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="StreamPlay - Plataforma de streaming de filmes e séries">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - StreamPlay</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <h1 class="logo"><a href="index.html">StreamPlay</a></h1>
+
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="planos.html">Planos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contato" class="contato">
+            <h2>Cadastre-se</h2>
+
+            <form id="formCadastro">
+                <div class="campo">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" id="telefone" maxlength="15" required>
+                </div>
+
+                <button type="submit" class="btn">Enviar cadastro</button>
+            </form>
+
+            <p id="mensagemSucesso"></p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 StreamPlay. Todos os direitos reservados.</p>
+    </footer>
+
+    
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
