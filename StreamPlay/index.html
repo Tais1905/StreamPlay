@@ -20,27 +20,50 @@
                 <li><a href="index.html">Início</a></li>
                 <li><a href="catalogo.html">Catálogo</a></li>
                 <li><a href="planos.html">Planos</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="contato.html">Cadastre-se</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="inicio" class="hero">
-            <article class="hero-conteudo">
+        <!-- ===== HERO COM VÍDEO DE FUNDO ===== -->
+        <section class="hero-video">
+            <!-- Vídeo de fundo: House of the Dragon -->
+            <video autoplay muted loop playsinline id="bgVideo">
+                <source src="videos/House of the Dragon.mp4" type="video/mp4">
+            </video>
+            
+            <div class="hero-conteudo">
                 <h2>Assista filmes e séries onde quiser</h2>
-                <p>Uma plataforma de streaming com catálogo variado, planos acessíveis e experiência simples para o
-                    usuário.</p>
-                <a href="catalogo.html" class="btn">Ver catálogo</a>
-            </article>
+                <p>Uma plataforma de streaming com catálogo variado, planos acessíveis e experiência simples para o usuário.</p>
+                
+                <div class="hero-botoes">
+                    <a href="catalogo.html" class="btn-hero btn-hero-principal">
+                        🎬 Ver Catálogo
+                    </a>
+                    <button id="btnAbrirVideo" class="btn-hero btn-hero-secundario">
+                        <span class="icone">▶</span> Assistir Trailer
+                    </button>
+                </div>
+            </div>
         </section>
     </main>
+
+    <!-- ===== MODAL DE VÍDEO ===== -->
+    <div id="videoModal" class="modal">
+        <div class="modal-conteudo video-modal">
+            <button id="fecharVideo" class="fechar">&times;</button>
+            <!-- Vídeo do modal: House of the Dragon -->
+            <video controls id="videoPlayer" width="100%">
+                <source src="videos/House of the Dragon.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo.
+            </video>
+        </div>
+    </div>
 
     <footer class="footer">
         <p>&copy; 2026 StreamPlay. Todos os direitos reservados.</p>
     </footer>
-
-    
 
     <script src="js/script.js"></script>
 </body>
